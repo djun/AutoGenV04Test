@@ -100,7 +100,12 @@ participants:设置Team的参与者(Agent) ,List列表
 termination_condition:Team终止条件，默认None则无限期运行              
 max_turns:Team支持的最大会话回合数，默认None则无限制    
 **MagenticOneGroupChat**                   
-官方正在开发中，相应源码暂没相关注释                   
+一个通用的多Agent系统，用于解决各种领域的开放式网络和基于文件的任务              
+它代表了多代理系统向前迈出的重要一步，在多项代理基准测试中取得了极具竞争力的性能            
+其属性如下:         
+participants:设置Team的参与者(Agent) ,List列表                           
+termination_condition:Team终止条件，默认None则无限期运行              
+max_turns:Team支持的最大会话回合数，默认None则无限制                  
 **(1)Team管理**                 
 **run()**               
 处理任务并返回任务结果             
