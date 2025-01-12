@@ -2,8 +2,8 @@
 ## 1.1、本次分享介绍                      
 AutoGen v0.4稳定版本框架介绍及功能测试                                
 相关视频:                     
+https://www.bilibili.com/video/BV17WcVeZERm/
 https://youtu.be/7H00xQK8rDM                        
-
 
 ## 1.2 AutoGen介绍
 AutoGen是微软发布的一个用于构建AI Agent系统和应用程序的开源框架                                                              
