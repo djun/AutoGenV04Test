@@ -1,6 +1,9 @@
 # 1、项目介绍
 ## 1.1、本次分享介绍                      
-AutoGen v0.4稳定版本框架介绍及功能测试                                                     
+AutoGen v0.4稳定版本框架介绍及功能测试                                
+相关视频:                     
+https://youtu.be/7H00xQK8rDM                        
+
 
 ## 1.2 AutoGen介绍
 AutoGen是微软发布的一个用于构建AI Agent系统和应用程序的开源框架                                                              
@@ -101,7 +104,7 @@ termination_condition:Team终止条件，默认None则无限期运行
 max_turns:Team支持的最大会话回合数，默认None则无限制    
 **MagenticOneGroupChat**                   
 一个通用的多Agent系统，用于解决各种领域的开放式网络和基于文件的任务              
-它代表了多代理系统向前迈出的重要一步，在多项代理基准测试中取得了极具竞争力的性能            
+它代表了多Agent系统向前迈出的重要一步，在多项Agent基准测试中取得了极具竞争力的性能            
 其属性如下:         
 participants:设置Team的参与者(Agent) ,List列表                           
 termination_condition:Team终止条件，默认None则无限期运行              
