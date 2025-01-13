@@ -3,7 +3,9 @@
 **(第一期)[2025.1.12]AutoGen v0.4稳定版本框架介绍及AgentChat应用接口功能测试**                                       
 https://www.bilibili.com/video/BV17WcVeZERm/                                                            
 https://youtu.be/7H00xQK8rDM                                          
-**(第二期)[2025.1.13]AutoGen v0.4稳定版本Studio低代码平台使用**                                             
+**(第二期)[2025.1.13]AutoGen v0.4稳定版本Studio低代码平台使用**                               
+https://www.bilibili.com/video/BV1qTcUe4EQx/                      
+https://youtu.be/eH65c1bfM3Q                            
                 
 
 ## 1.2 AutoGen介绍
