@@ -1,9 +1,10 @@
 # 1、项目介绍
-## 1.1、本次分享介绍                      
-AutoGen v0.4稳定版本框架介绍及功能测试                                
-相关视频:                     
-https://www.bilibili.com/video/BV17WcVeZERm/                
-https://youtu.be/7H00xQK8rDM                        
+## 1.1、本次分享介绍       
+**(第一期)[2025.1.12]AutoGen v0.4稳定版本框架介绍及AgentChat应用接口功能测试**                                       
+https://www.bilibili.com/video/BV17WcVeZERm/                                                            
+https://youtu.be/7H00xQK8rDM                                          
+**(第二期)[2025.1.13]AutoGen v0.4稳定版本Studio低代码平台使用**                                             
+                
 
 ## 1.2 AutoGen介绍
 AutoGen是微软发布的一个用于构建AI Agent系统和应用程序的开源框架                                                              
@@ -197,11 +198,27 @@ pip install -U "autogen-agentchat"
 pip install "autogen-ext[openai]"                           
 pip install asyncio==3.4.3                       
 
+
 # 4、测试
-相关测试代码在BasicTest文件夹下                
+## 4.1 AgentChat框架基本功能测试
+相关测试代码在BasicTest文件夹下                    
+
+## 4.2 AutoGen Studio低代码平台使用
+(1)运行如下命令安装依赖包                                      
+pip install -U autogenstudio                               
+(2)命令行终端启动服务，运行如下命令                                                         
+autogenstudio ui --port 8081                    
+支持修改相关参数自定义应用程序如下:                   
+**--host <host>** 指定主机地址，默认为localhost                           
+**--appdir <appdir>** 指定存储应用程序文件（如数据库和生成的用户文件）的文件夹。默认为用户主目录中的.autogenstudio文件夹                                                 
+**--port <port>** 指定端口号。默认为8080                                    
+**--upgrade-database** 升级数据库架构。默认为False                                 
+**--reload** 启用在对代码进行更改时自动重新加载服务器。默认为 False                      
+**--database-uri** 指定数据库URI                        
+(4)登录平台使用                     
+http://localhost:8081/                           
 
 
-   
 
 
 
