@@ -6,7 +6,10 @@ https://youtu.be/7H00xQK8rDM
 **(第二期)[2025.1.13]AutoGen v0.4稳定版本Studio低代码平台使用**                              
 https://www.bilibili.com/video/BV1qTcUe4EQx/                                
 https://youtu.be/eH65c1bfM3Q                                         
-**(第三期)[2025.1.15]AutoGen v0.4稳定版本Magentic-One CLI功能测试**                             
+**(第三期)[2025.1.15]AutoGen v0.4稳定版本Magentic-One CLI功能测试**                            
+https://www.bilibili.com/video/BV1xZc6eJEwz/                        
+https://youtu.be/4v8ldONTecY                           
+
 
 ## 1.2 AutoGen介绍
 AutoGen是微软发布的一个用于构建AI Agent系统和应用程序的开源框架                                                              
