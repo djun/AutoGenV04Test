@@ -3,10 +3,10 @@
 **(第一期)[2025.1.12]AutoGen v0.4稳定版本框架介绍及AgentChat应用接口功能测试**                                       
 https://www.bilibili.com/video/BV17WcVeZERm/                                                            
 https://youtu.be/7H00xQK8rDM                                          
-**(第二期)[2025.1.13]AutoGen v0.4稳定版本Studio低代码平台使用**                               
-https://www.bilibili.com/video/BV1qTcUe4EQx/                      
-https://youtu.be/eH65c1bfM3Q                            
-                
+**(第二期)[2025.1.13]AutoGen v0.4稳定版本Studio低代码平台使用**                              
+https://www.bilibili.com/video/BV1qTcUe4EQx/                                
+https://youtu.be/eH65c1bfM3Q                                         
+**(第三期)[2025.1.15]AutoGen v0.4稳定版本Magentic-One CLI功能测试**                             
 
 ## 1.2 AutoGen介绍
 AutoGen是微软发布的一个用于构建AI Agent系统和应用程序的开源框架                                                              
@@ -105,13 +105,13 @@ selector_func:自定义选择器函数，用于获取对话历史记录并返回
 participants:设置Team的参与者(Agent) ,List列表                           
 termination_condition:Team终止条件，默认None则无限期运行              
 max_turns:Team支持的最大会话回合数，默认None则无限制    
-**MagenticOneGroupChat**                   
+**MagenticOneGroupChat**                            
 一个通用的多Agent系统，用于解决各种领域的开放式网络和基于文件的任务              
-它代表了多Agent系统向前迈出的重要一步，在多项Agent基准测试中取得了极具竞争力的性能            
+它代表了多代理系统向前迈出的重要一步，在多项代理基准测试中取得了极具竞争力的性能            
 其属性如下:         
 participants:设置Team的参与者(Agent) ,List列表                           
 termination_condition:Team终止条件，默认None则无限期运行              
-max_turns:Team支持的最大会话回合数，默认None则无限制                  
+max_turns:Team支持的最大会话回合数，默认None则无限制    
 **(1)Team管理**                 
 **run()**               
 处理任务并返回任务结果             
@@ -200,7 +200,6 @@ pip install -U "autogen-agentchat"
 pip install "autogen-ext[openai]"                           
 pip install asyncio==3.4.3                       
 
-
 # 4、测试
 ## 4.1 AgentChat框架基本功能测试
 相关测试代码在BasicTest文件夹下                    
@@ -220,26 +219,20 @@ autogenstudio ui --port 8081
 (4)登录平台使用                     
 http://localhost:8081/                           
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## 4.3 Magentic-One CLI使用   
+**核心设计思想:**                                            
+<img src="./MagenticOneCli/01.png" alt="" width="600" />                 
+**其过程如下:**                  
+Magentic-One的工作基于一个多Agent架构，其中的首席协调者(Orchestrator)Agent负责高层次规划、指导其他Agent并跟踪任务进度                                 
+协调者首先要制定一个处理任务的计划，在任务分类账中收集所需的事实和有根据的猜测                               
+在计划的每一个步骤中，协调者都会创建一个进度账本，对任务进度进行自我反思，并检查任务是否已完成                                  
+如果任务尚未完成，它会为 Magentic-One 的其他Agent分配一个子任务来完成。被分配的Agent完成子任务后，协调者会更新进度分类账，并以这种方式继续直至任务完成                                                           
+如果协调者发现进度不够，可以更新任务分类账并创建新计划。如上图所示，协调者的工作分为更新任务分类账的外循环和更新进度分类账的内循环                   
+**在命令行终端中使用:**                       
+首先安装依赖 pip install -U magentic-one-cli                                     
+直接运行 m1 "我今天的心情非常不错" 进行问答                                         
+export OPENAI_BASE_URL="https://yunwu.ai/v1"                                
+export OPENAI_API_KEY="sk-COUbOl2EH7IYaz6SqFADUp7Ie4WA4rzFvNr3PzIAZjVyHQcJ"                                        
+**在代码中集成使用:**                                                
+相关测试代码在MagenticOneCli文件夹下的1_BasicTest.py                                     
 
