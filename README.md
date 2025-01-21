@@ -9,7 +9,8 @@ https://youtu.be/eH65c1bfM3Q
 **(第三期)[2025.1.15]AutoGen v0.4稳定版本Magentic-One CLI功能测试**                            
 https://www.bilibili.com/video/BV1xZc6eJEwz/                        
 https://youtu.be/4v8ldONTecY                           
-
+**(第四期)[2025.1.21]AutoGen v0.4稳定版本AutoGen-Extensions 外部服务或功能库集成功能测试**                             
+主要内容：与LangChain提供的Tools进行功能集成测试                      
 
 ## 1.2 AutoGen介绍
 AutoGen是微软发布的一个用于构建AI Agent系统和应用程序的开源框架                                                              
@@ -238,4 +239,22 @@ export OPENAI_BASE_URL="https://yunwu.ai/v1"
 export OPENAI_API_KEY="sk-COUbOl2EH7IYaz6SqFADUp7Ie4WA4rzFvNr3PzIAZjVyHQcJ"                                        
 **在代码中集成使用:**                                                
 相关测试代码在MagenticOneCli文件夹下的1_BasicTest.py                                     
+
+## 4.4 AutoGen-Extensions 使用                     
+相关测试代码在Extensions文件夹下                
+首先打开命令行终端，运行命令安装依赖 pip install autogen-ext                       
+**(1)使用LangChain提供的Tools**                                              
+**测试用例1:** PythonAstREPLTool                                  
+当前测试脚本在Extensions/LangChainTest文件夹下                                           
+下载测试数据集:https://github.com/pandas-dev/pandas/blob/main/doc/data/titanic.csv                                            
+打开命令行终端，运行命令安装依赖 pip install langchain_experimental                                     
+运行脚本 python PythonAstREPLTool.py                               
+**测试用例2:** 测试duckduckgo搜索                         
+Tools介绍:https://python.langchain.com/docs/integrations/tools/                                                             
+duckduckgo文档:https://duckduckgo.com/duckduckgo-help-pages/settings/params/                                                                                
+打开命令行终端，运行命令安装依赖 pip install -qU duckduckgo-search langchain-community                                               
+运行脚本 python DuckDuckGoSearch.py                                        
+
+
+
 
