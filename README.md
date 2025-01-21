@@ -11,6 +11,7 @@ https://www.bilibili.com/video/BV1xZc6eJEwz/
 https://youtu.be/4v8ldONTecY                           
 **(第四期)[2025.1.21]AutoGen v0.4稳定版本AutoGen-Extensions 外部服务或功能库集成功能测试**                             
 主要内容：与LangChain提供的Tools进行功能集成测试                      
+https://youtu.be/g7X8OgkBZzA                   
 
 ## 1.2 AutoGen介绍
 AutoGen是微软发布的一个用于构建AI Agent系统和应用程序的开源框架                                                              
