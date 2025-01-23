@@ -271,7 +271,7 @@ pip install --upgrade autogen-ext
 第二次请求相同消息时，将直接返回缓存的响应，而不再调用大模型的API接口                                         
 使用缓存的目的是提高性能，减少重复请求，提高响应速度，尤其在对相同输入频繁请求时非常有效                                 
 相关测试代码在Extensions/Cache目录下，运行相关的代码进行测试前，需安装相关依赖 pip install diskcache                                       
-python CacheTeam.py                   
+在运行 python CacheTeam.py 脚本之前，在当前目录下创建空文件夹tmpdirname                  
 **(2)集成调用GraphRAG**             
 GraphRAG相关视频:                           
 https://www.bilibili.com/video/BV1AADaYfE2T/                                    
