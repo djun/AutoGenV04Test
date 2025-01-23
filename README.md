@@ -12,7 +12,10 @@ https://youtu.be/4v8ldONTecY
 **(第四期)[2025.1.21]AutoGen v0.4稳定版本AutoGen-Extensions 外部服务或功能库集成功能测试**                             
 主要内容：与LangChain提供的Tools进行功能集成测试                 
 https://www.bilibili.com/video/BV1B2waeUEbY/                         
-https://youtu.be/g7X8OgkBZzA                   
+https://youtu.be/g7X8OgkBZzA                 
+**(第五期)[2025.1.23]AutoGen v0.4稳定版本发布后第一次重大更新发布v0.4.3,Extensions官方扩展库新增功能测试**                                          
+主要内容：为大家介绍两个重大更新:使用缓存系统提高大模型的响应效率、集成调用GraphRAG                                  
+
 
 ## 1.2 AutoGen介绍
 AutoGen是微软发布的一个用于构建AI Agent系统和应用程序的开源框架                                                              
@@ -256,6 +259,42 @@ Tools介绍:https://python.langchain.com/docs/integrations/tools/
 duckduckgo文档:https://duckduckgo.com/duckduckgo-help-pages/settings/params/                                                                                
 打开命令行终端，运行命令安装依赖 pip install -qU duckduckgo-search langchain-community                                               
 运行脚本 python DuckDuckGoSearch.py                                        
+
+## 4.5 AutoGen V0.4.3重大更新     
+首先，一次运行如下命令，升级相关的依赖包到最新版本V0.4.3(2025-01-23)                                            
+pip install --upgrade autogen-core                                                    
+pip install --upgrade autogen-agentchat                                                       
+pip install --upgrade autogen-ext                         
+**(1)使用缓存系统提高大模型的响应效率**             
+使用缓存系统(DiskCacheStore和ChatCompletionCache)来避免重复的API请求，提高大模型的响应效率                 
+第一次请求会从大模型获取响应并将其缓存                                 
+第二次请求相同消息时，将直接返回缓存的响应，而不再调用大模型的API接口                                         
+使用缓存的目的是提高性能，减少重复请求，提高响应速度，尤其在对相同输入频繁请求时非常有效                                 
+相关测试代码在Extensions/Cache目录下，运行相关的代码进行测试前，需安装相关依赖 pip install diskcache                                       
+python CacheTeam.py                   
+**(2)集成调用GraphRAG**             
+GraphRAG相关视频:                           
+https://www.bilibili.com/video/BV1AADaYfE2T/                                    
+https://youtu.be/7WFMd8U8C7E                                         
+**(a)构建GraphRAG索引**                  
+首先构建GraphRAG，安装相关依赖，最新版本1.2.0版本                                   
+pip install graphrag==1.2.0                   
+创建项目并初始化                          
+cd Extensions/GraphRAG                
+mkdir -p ./ragtest/input                                  
+cd ragtest                         
+graphrag init --root ./                           
+修改.env和settings.yaml文件内容，请参考提供的文件内容进行调整                                                
+接下来，优化提示词(可以不优化)                   
+python -m graphrag prompt-tune --config ./settings.yaml --root ./ --language Chinese --output ./prompts                      
+最后运行如下命令，进行索引构建                                             
+graphrag index --root ./                            
+索引构建完成后，进行检索测试                           
+graphrag query --root ./ --method local --query "张三九的基本信息?"                 
+graphrag query --root ./ --method global --query "给张三九一些健康建议?"                       
+**(b)AutoGen集成调用**           
+运行 python GraphRAGTeam.py 进行测试                   
+
 
 
 
