@@ -297,6 +297,19 @@ graphrag query --root ./ --method global --query "给张三九一些健康建议
 **(b)AutoGen集成调用**           
 运行 python GraphRAGTeam.py 进行测试                   
 
+## 4.6 AutoGen V0.4.5功能更新     
+首先，一次运行如下命令，升级相关的依赖包到最新版本V0.4.5                                                       
+pip install --upgrade autogen-core                                                     
+pip install --upgrade autogen-agentchat                                                        
+pip install --upgrade autogen-ext                          
+**(1)为AgentChat的Agent和Team提供流式模型输出服务**                      
+如果想在控制台应用程序中查看令牌流，可以直接使用Console                
+如果自己处理消息并将其流到前端，引入ModelClientStreamingChunkEvent，用于Agent中的流式模型输出和更新处理，只需要在定义Agent的时候，启用该参数model_client_stream=True                                   
+相关测试代码在BasicTest目录下，运行 python 5_RunTeamStream.py 进行测试                                       
+**(2)支持DeepSeek R1式推理输出**                       
+这里为大家使用代理的方式测试DeepSeek-R1模型                       
+相关测试代码在BasicTest目录下，运行 python 6_RunTeamDeepSeek.py 进行测试                  
+         
 
 
 
