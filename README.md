@@ -14,10 +14,11 @@ https://youtu.be/4v8ldONTecY
 https://www.bilibili.com/video/BV1B2waeUEbY/                         
 https://youtu.be/g7X8OgkBZzA                 
 **(第五期)[2025.1.23]AutoGen v0.4稳定版本发布后第一次重大更新发布v0.4.3,Extensions官方扩展库新增功能测试**                                          
-主要内容：为大家介绍两个重大更新:使用缓存系统提高大模型的响应效率、集成调用GraphRAG                     
-https://www.bilibili.com/video/BV1Rvf5YHEEx/                             
-https://youtu.be/Kn8wFiXu8d0                  
-
+主要内容：为大家介绍两个重大更新:使用缓存系统提高大模型的响应效率、集成调用GraphRAG                       
+https://www.bilibili.com/video/BV1Rvf5YHEEx/                                 
+https://youtu.be/Kn8wFiXu8d0                      
+**(第六期)[2025.2.9]AutoGen v0.4.5版本新增功能测试**                                                                                    
+主要内容：AgentChat中为Agent和Team提供流式模型输出服务，支持DeepSeek R1式推理输出                                                                                 
 
 ## 1.2 AutoGen介绍
 AutoGen是微软发布的一个用于构建AI Agent系统和应用程序的开源框架                                                              
