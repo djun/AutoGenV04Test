@@ -19,7 +19,8 @@ https://www.bilibili.com/video/BV1Rvf5YHEEx/
 https://youtu.be/Kn8wFiXu8d0                      
 **(第六期)[2025.2.9]AutoGen v0.4.5版本新增功能测试**                                                                                    
 主要内容：AgentChat中为Agent和Team提供流式模型输出服务，支持DeepSeek R1式推理输出           
-https://youtu.be/D0x1_uiu4RE            
+https://www.bilibili.com/video/BV1LxNmeFEAa/                            
+https://youtu.be/D0x1_uiu4RE                      
 
 ## 1.2 AutoGen介绍
 AutoGen是微软发布的一个用于构建AI Agent系统和应用程序的开源框架                                                              
