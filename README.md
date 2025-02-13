@@ -22,7 +22,8 @@ https://youtu.be/Kn8wFiXu8d0
 https://www.bilibili.com/video/BV1LxNmeFEAa/                            
 https://youtu.be/D0x1_uiu4RE                      
 **(第七期)[2025.2.13]AutoGen v0.4.6版本新增功能测试**                                                                                    
-主要内容：AutoGen与DeepSeek R1模型集成(Ollama方式本地部署deepseek-r1:14b大模型)、AutoGen与MCP服务器集成、AutoGen与HTTP API工具集成            
+主要内容：AutoGen与DeepSeek R1模型集成(Ollama方式本地部署deepseek-r1:14b大模型)、AutoGen与MCP服务器集成、AutoGen与HTTP API工具集成         
+https://youtu.be/s4r4Y0sWgCU        
 
 ## 1.2 AutoGen介绍
 AutoGen是微软发布的一个用于构建AI Agent系统和应用程序的开源框架                                                              
