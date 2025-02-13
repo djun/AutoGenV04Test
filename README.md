@@ -21,6 +21,8 @@ https://youtu.be/Kn8wFiXu8d0
 主要内容：AgentChat中为Agent和Team提供流式模型输出服务，支持DeepSeek R1式推理输出           
 https://www.bilibili.com/video/BV1LxNmeFEAa/                            
 https://youtu.be/D0x1_uiu4RE                      
+**(第七期)[2025.2.13]AutoGen v0.4.6版本新增功能测试**                                                                                    
+主要内容：AutoGen与DeepSeek R1模型集成(Ollama方式本地部署deepseek-r1:14b大模型)、AutoGen与MCP服务器集成、AutoGen与HTTP API工具集成            
 
 ## 1.2 AutoGen介绍
 AutoGen是微软发布的一个用于构建AI Agent系统和应用程序的开源框架                                                              
@@ -313,6 +315,26 @@ pip install --upgrade autogen-ext
 这里为大家使用代理的方式测试DeepSeek-R1模型                       
 相关测试代码在BasicTest目录下，运行 python 6_RunTeamDeepSeek.py 进行测试                  
          
+## 4.7 AutoGen V0.4.6功能更新     
+首先，一次运行如下命令，升级相关的依赖包到最新版本V0.4.6                                                        
+pip install --upgrade autogen-core                                                      
+pip install --upgrade autogen-agentchat                                                         
+pip install --upgrade autogen-ext                            
+**(1)AutoGen与DeepSeek R1模型集成**                          
+使用Ollama方式本地部署deepseek-r1:14b大模型                              
+相关测试代码在BasicTest目录下，运行 python 7_RunTeamDeepSeekOllama.py 进行测试            
+**(2)AutoGen与MCP服务器集成**           
+首先运行如下指令安装相关的依赖                  
+pip install mcp-server-fetch              
+pip install json-schema-to-pydantic          
+mcp-server-fetch:从互联网获取 URL 并将其内容提取为markdown,参数:url(链接地址);参数:max_length(返回的最大字符数,默认值:5000);raw(获取原始内容而不进行Markdown转换,默认:false)                   
+关于MCP协议相关视频，参考如下项目                      
+https://github.com/NanGePlus/MCPTest                          
+相关测试代码在BasicTest目录下utils/mcp_server_fetch.py和8_RunTeamStreamMCP.py，运行 python 8_RunTeamStreamMCP.py 进行测试            
+**(3)AutoGen与HTTP API工具集成**           
+支持远程调用HTTP API工具             
+相关测试代码在BasicTest目录下，运行 python 9_RunTeamStreamHttpTool.py 进行测试      
+
 
 
 
